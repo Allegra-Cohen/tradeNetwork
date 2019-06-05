@@ -52,7 +52,7 @@ class Model(Model):
 			if a.role == "producer" and self.schedule.time % 4 == 0:
 				a.rice = 2 # Have the producers produce every full timestep, assume they've sold everything
 			if a.role == "consumer" and self.schedule.time % 4 == 3:
-				a.capital += 2 # Have the consumers have an income
+				a.capital += 1 # Have the consumers have an income
 				a.rice = 0 # Consumers eat rice
 
 		self.schedule.step()
